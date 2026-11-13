@@ -1,0 +1,164 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Echoes of Palestine | أصوات فلسطين</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <div class="website">
+
+    <header class="navbar">
+      <a href="#" class="logo">ECHOES <span>OF PALESTINE</span></a>
+      <div class="nav-right">
+        <span class="nav-dot"></span>
+        <span>AN AUDIOVISUAL JOURNEY</span>
+      </div>
+    </header>
+
+    <main class="hero">
+
+      <!-- The five photographic scenes -->
+      <div class="slideshow" id="slideshow">
+        <div class="slide active" style="background-image: url('images/sunset.jpg')"></div>
+        <div class="slide" style="background-image: url('images/oldtown.jpg')"></div>
+        <div class="slide" style="background-image: url('images/traditionalcooking.jpg')"></div>
+        <div class="slide" style="background-image: url('images/olivetrees.jpg')"></div>
+        <div class="slide" style="background-image: url('images/beach.jpg')"></div>
+      </div>
+
+      <div class="overlay"></div>
+      <div class="grain"></div>
+
+      <div class="side-label">PALESTINE — فلسطين</div>
+
+      <section class="hero-content">
+        <div class="eyebrow">
+          <span class="small-line"></span>
+          A JOURNEY THROUGH SOUND & MEMORY
+        </div>
+
+        <p class="arabic-heading" lang="ar" dir="rtl">
+          أصوات فلسطين
+        </p>
+
+        <h1>Echoes of<br><em>Palestine.</em></h1>
+
+        <p class="intro">
+          A place is more than what we see. It is the voices,
+          the streets, the traditions, and the everyday
+          moments that make it home.
+        </p>
+
+        <button id="startBtn" class="start-button">
+          <span class="play-symbol">▶</span>
+          <span id="startText">START LISTENING</span>
+          <span class="button-arrow">↗</span>
+        </button>
+
+        <p class="headphone-note">♫ BEST EXPERIENCED WITH HEADPHONES</p>
+      </section>
+
+      <div class="scene-info">
+        <span class="scene-count" id="sceneCount">01 / 05</span>
+        <div>
+          <p class="scene-label">CURRENT SCENE</p>
+          <h2 id="sceneTitle">The Land We Call Home</h2>
+          <p id="sceneDescription">A landscape filled with history and memories.</p>
+        </div>
+      </div>
+
+      <div class="vertical-text">SCROLL TO EXPLORE ↓</div>
+    </main>
+
+    <!-- Audio player -->
+    <section class="player-section" id="player">
+      <div class="player-top">
+        <div>
+          <p class="section-label">THE SOUNDS OF HOME</p>
+          <h2>Listen to <em>Palestine.</em></h2>
+        </div>
+        <span class="audio-type">FIELD RECORDING • 01</span>
+      </div>
+
+      <audio id="audioPlayer" preload="metadata">
+        <source src="audio/palestine.mp3" type="audio/mpeg">
+        Your browser does not support HTML5 audio.
+      </audio>
+
+      <div class="audio-controls">
+        <button id="restartBtn" class="control-small" aria-label="Restart audio">↺</button>
+        <button id="playBtn" class="control-play" aria-label="Play audio">▶</button>
+
+        <div class="timeline">
+          <div class="time-labels">
+            <span id="currentTime">0:00</span>
+            <span id="duration">1:05</span>
+          </div>
+          <input type="range" id="progressBar"
+                 min="0" max="100" value="0"
+                 aria-label="Audio progress">
+        </div>
+
+        <button id="muteBtn" class="control-small" aria-label="Mute audio">♫</button>
+      </div>
+
+      <p class="player-note" id="playerStatus">
+        Press play to begin your journey.
+      </p>
+    </section>
+
+    <!-- Interactive photo navigation -->
+    <section class="gallery-section">
+      <div class="gallery-heading">
+        <div>
+          <p class="section-label">FIVE GLIMPSES OF HOME</p>
+          <h2>Stories in <em>every frame.</em></h2>
+        </div>
+        <p>Choose a photograph to explore a moment in the soundscape.</p>
+      </div>
+
+      <div class="gallery-grid">
+        <button class="gallery-card selected" data-scene="0">
+          <img src="images/sunset.jpg" alt="Sunset over a Palestinian city">
+          <span>01 — THE LAND</span>
+        </button>
+
+        <button class="gallery-card" data-scene="1">
+          <img src="images/oldtown.jpg" alt="Historic Palestinian market street">
+          <span>02 — THE STREETS</span>
+        </button>
+
+        <button class="gallery-card" data-scene="2">
+          <img src="images/traditionalcooking.jpg" alt="Women preparing traditional bread">
+          <span>03 — THE TRADITIONS</span>
+        </button>
+
+        <button class="gallery-card" data-scene="3">
+          <img src="images/olivetrees.jpg" alt="Olive trees in the Palestinian countryside">
+          <span>04 — THE ROOTS</span>
+        </button>
+
+        <button class="gallery-card" data-scene="4">
+          <img src="images/beach.jpg" alt="Children playing in the sea">
+          <span>05 — THE MEMORIES</span>
+        </button>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-arabic" lang="ar" dir="rtl">
+        فلسطين في القلب
+      </div>
+      <p>PALESTINE, ALWAYS IN OUR HEARTS.</p>
+      <span>AN INTERACTIVE SOUNDSCAPE EXPERIENCE</span>
+    </footer>
+
+  </div>
+
+</body>
+</html>
